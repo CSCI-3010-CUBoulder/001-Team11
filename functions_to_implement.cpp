@@ -67,10 +67,21 @@ std::vector<int> SquaresUntil(int n);
 int NthFibonacci(int n);
 
 // takes an int, n, and returns the factorial of that int (n!)
-int Factorial(int n);
+int Factorial(int n){
+    int ans = n;
+    while (n > 1){
+        ans *= n-1;
+    }
+    return ans;
+}
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num);
+int Sign(int num) {
+    if (num < 0) {
+        return -1;
+    }
+    return 1;
+}
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
@@ -96,7 +107,7 @@ double Sum(std::vector<double> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
 double Product(std::vector<double> nums);
-
+//kluasdfkjjk;asdfjk;jasdfjk;kjl;asdfkj;kjl;asdflkj;jklasdflkj
 // Adds an double n to each element of a given vector
 std::vector<double> VectorPlusN(std::vector<double> v, double n);
 
