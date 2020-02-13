@@ -7,8 +7,9 @@ all: test
 
 clean:
 	rm test 
+	rm functions_to_implement.o
 
-test: functions_to_implement.o test.cpp
+test: test.cpp functions_to_implement.o
 	$(CXX) $(CXXFLAGS) test.cpp functions_to_implement.o -o test
 
 #cov: Rectangle.o test.cpp

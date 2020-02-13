@@ -1,4 +1,7 @@
+#include<iostream>
 #include<string>
+#include<vector>
+#include "catch.hpp"
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -41,11 +44,13 @@ std::vector<bool> EvenMask(std::vector<int>);
 std::vector<bool> OddMask(std::vector<int>);
 
 // Sums all numbers in a vector and returns the resulting value
-std::vector<int>::iterator it;
-int sumsum = 0;
+
 int Sum(std::vector<int> nums){
-    for(it = begins(), it<end();it++)
-    sum = sum + *it;
+    std::vector<int>::iterator it;
+    int sum = 0;
+    for(it = nums.begin(); it<nums.end(); it++){
+        sum = sum + *it;
+    }
 }
 
 // Multiplies all numbers in a vector together and returns the resulting value
@@ -69,6 +74,9 @@ int NthFibonacci(int n);
 
 // takes an int, n, and returns the factorial of that int (n!)
 int Factorial(int n){
+    if (n == 0){
+        return 1;
+    }
     int ans = n;
     while (n > 1){
         ans *= n-1;
